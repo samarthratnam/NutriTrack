@@ -13,10 +13,31 @@ A full-stack app with:
   - total nutrients for full recipe
   - nutrition **per 100g**
   - nutrition **per serving**
+- Generates **health bar metrics** against FSSAI-style reference values.
+- Returns **FSSAI rulebook checks** (`pass` / `warn` / `fail`) with compliance status.
+- Returns **cut-down / add-up guidance** and common allergen alternatives.
 - Generates a downloadable PDF label titled **NUTRITION INFORMATION**.
 - Handles missing ingredients with clear error messages.
 - Enables CORS for frontend integration.
 - Provides an aesthetic frontend to compose recipes, visualize per-serving targets, and download labels.
+
+## Intro (Understanding Problem Statement)
+
+Let me tell you the REAL problem first.
+
+In India, every packaged food product MUST have an FSSAI-compliant nutrition label by law.
+
+But here's the pain:
+- A home baker selling cookies online
+- A cloud kitchen launching packaged meals
+- A food startup launching their first product
+
+All of them face the SAME 3 problems:
+1. They don't know FSSAI format rules
+2. Manual calculation is complex and error-prone
+3. Hiring a nutritionist costs INR 5000-INR 20000
+
+And one wrong label can lead to product rejection and potential monetary penalty risk.
 
 ## Tech stack
 
@@ -134,7 +155,45 @@ Values are rounded to 2 decimals in API output.
     "saturated_fat_g": 1.86,
     "sodium_mg": 43.2
   },
-  "total_weight": 600.0
+  "total_weight": 600.0,
+  "health_bars": [
+    {
+      "key": "sugar_g",
+      "label": "Sugar",
+      "unit": "g",
+      "value": 25.06,
+      "reference_value": 50.0,
+      "percent_of_reference": 50.12,
+      "status": "high",
+      "guidance": "High for one serving. Consider reducing this in the recipe."
+    }
+  ],
+  "fssai_suggestions": {
+    "cut_down": [],
+    "add_up": [],
+    "note": "FSSAI label reference values used: Energy 2000 kcal, Fat 67 g, Saturated Fat 22 g, Added Sugar 50 g, Sodium 2000 mg."
+  },
+  "allergy_alerts": [],
+  "fssai_compliance": {
+    "is_fssai_aligned": false,
+    "status": "not_aligned",
+    "warning_count": 2,
+    "warning_banner": "This recipe is currently NOT ready for FSSAI-friendly label positioning.",
+    "legal_note": "This checker is an educational screening tool, not a legal certification.",
+    "risk_note": "Incorrect or misleading packaged food labels may lead to product rejection and can attract regulatory penalties/fines under applicable food safety law.",
+    "warnings": [
+      "Sugar is very high per serving (50.12% of reference)."
+    ],
+    "rulebook": [
+      {
+        "rule_id": "FSSAI-R3",
+        "title": "Sugar load per serving",
+        "description": "Prefer keeping sugar at or below 25.0% of reference value per serving.",
+        "status": "fail",
+        "observation": "25.06 g per serving (50.12% of reference)."
+      }
+    ]
+  }
 }
 ```
 

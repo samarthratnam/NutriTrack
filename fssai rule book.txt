@@ -1,0 +1,117 @@
+FSSAI RULE BOOK (Quick Reference for NutriLabel AI)
+Version date: 2026-02-27
+
+Purpose
+- This file is a practical summary for packaged-food nutrition and label compliance checks.
+- It is not legal advice or a substitute for full statutory text.
+
+Primary official references
+1) Food Safety and Standards (Labelling and Display) Regulations, 2020
+   Compendium Version VII (03.04.2025):
+   https://fssai.gov.in/upload/uploadfiles/files/Comp_Labelling%20Display_Version%20VII_03042025.pdf
+
+2) Amendment page for Labelling and Display Regulations, 2020
+   (includes Amendment 4 dated 08-08-2025):
+   https://www.fssai.gov.in/cms/amendment-fss-labelling-display.php
+
+3) Food Safety and Standards Act, 2006 (official FSSAI Act PDF):
+   https://fssai.gov.in/upload/uploadfiles/files/FOOD-ACT.pdf
+
+4) Food Safety and Standards (Advertising and Claims) Regulations, 2018 (compendium):
+   https://fssai.gov.in/upload/uploadfiles/files/Compendium_Advertising_Claims_Regulations_04_10_2022.pdf
+
+--------------------------------------------------------------------------------
+SECTION A: Core packaged-food label requirements (practical summary)
+--------------------------------------------------------------------------------
+
+A1) Labeling is mandatory for pre-packaged food
+- Every pre-packaged food must carry required declarations.
+- Label content should not be false, misleading, or deceptive.
+- Mandatory information should be clear, legible, and conspicuous.
+
+A2) Language
+- Mandatory declarations should be in English or Hindi (Devanagari).
+- Additional languages are allowed if they do not contradict mandatory text.
+
+A3) Mandatory declarations (typical retail package)
+- Name of food (true nature of food; shown on front of pack).
+- Ingredient list (descending order by weight/volume at manufacture stage).
+- Nutrition information panel.
+- Veg/Non-veg declaration and symbol as applicable.
+- Name and address (brand owner/manufacturer/marketer/packer as applicable).
+- FSSAI logo and licence number.
+- Net quantity, MRP, consumer care details (as per Legal Metrology framework).
+- Lot/code/batch number.
+- Date marking: date of manufacture/packing and expiry/use-by (best before may be additional/optional information).
+- Storage instructions where relevant.
+
+A4) Nutrition panel essentials
+- Nutritional declaration is generally per 100 g/ml (or per single-consumption pack where applicable).
+- Per serve percentage contribution to RDA is expected (as applicable under regulations).
+- Key daily reference basis widely used in regulation text:
+  2000 kcal energy, 67 g total fat, 22 g saturated fat, 2 g trans fat,
+  50 g added sugar, 2000 mg sodium (5 g salt).
+- Common nutrients expected in panel include:
+  energy, protein, carbohydrate, total sugars, added sugars,
+  total fat, saturated fat, trans fat, sodium (plus others as applicable).
+
+A5) Allergen declaration (important)
+- Common allergen classes include:
+  cereals containing gluten, crustaceans, milk, egg, fish, peanut/tree nuts, soy, sulphites (threshold rules apply).
+- Cross-contamination statement may be used where applicable (for example "May contain ...").
+
+A6) Principal display panel and legibility
+- Mandatory information should be grouped and visible on principal display panel.
+- Minimum numeral/letter sizes depend on panel area.
+- Net quantity/date/MRP/consumer care formatting also follows Legal Metrology requirements.
+
+A7) E-commerce
+- Mandatory label information should be made available before sale through digital means
+  (with specific allowed exceptions such as lot/date details before physical delivery).
+
+--------------------------------------------------------------------------------
+SECTION B: Business obligations under FSS Act, 2006 (practical summary)
+--------------------------------------------------------------------------------
+
+B1) Licence/registration
+- No person should run food business without licence (except specific exempt categories that require registration).
+- Practical check: ensure valid licence/registration status before market sale.
+
+B2) FBO responsibility
+- Food business operator is responsible for compliance with Act + Rules + Regulations.
+- Food should not be unsafe, misbranded, sub-standard, or sold contrary to licence conditions.
+
+--------------------------------------------------------------------------------
+SECTION C: Penalty snapshot (from FSS Act, 2006)
+--------------------------------------------------------------------------------
+
+Important: Penalties are case-specific, adjudicated by competent authorities, and can change with legal updates.
+
+- Section 52 (Misbranded food): penalty may extend up to INR 3,00,000.
+- Section 53 (Misleading advertisement): penalty may extend up to INR 10,00,000.
+- Section 63 (Business without licence): can include imprisonment and fine (up to INR 5,00,000 under current text).
+- Other sections may apply depending on facts (sub-standard, unsafe food, extraneous matter, etc.).
+
+--------------------------------------------------------------------------------
+SECTION D: How NutriLabel AI should use this file
+--------------------------------------------------------------------------------
+
+1) Compliance engine should treat this as a screening checklist, not certification.
+2) If risk signals are high (for example excessive sugar/saturated fat/sodium per serving), show warnings.
+3) Always display:
+   - "Educational checker, not legal certification."
+   - "Final legal compliance requires complete label review against latest official regulations."
+4) Keep links to official references visible in UI/README so users can verify.
+
+--------------------------------------------------------------------------------
+SECTION E: Update checklist (for maintainers)
+--------------------------------------------------------------------------------
+
+- Re-check amendment pages every quarter:
+  https://www.fssai.gov.in/cms/amendment-fss-labelling-display.php
+- Re-check FSS Act page:
+  https://fssai.gov.in/cms/food-safety-and-standards-act-2006.php
+- Re-check Advertising & Claims amendments:
+  https://www.fssai.gov.in/cms/Amendment-FSS-Advertising-Claims.php
+
+End of file.
